@@ -273,7 +273,7 @@ class SeriesCommon(Pane):
         return marker_ids
 
     def marker(self, time: Optional[datetime] = None, position: MARKER_POSITION = 'below',
-               shape: MARKER_SHAPE = 'arrow_up', color: str = '#2196F3', text: str = ''
+               shape: MARKER_SHAPE = 'arrow_up', color: str = '#2196F3', text: str = '', size: int = 1
                ) -> str:
         """
         Creates a new marker.\n
@@ -296,6 +296,7 @@ class SeriesCommon(Pane):
             "color": color,
             "shape": marker_shape(shape),
             "text": text,
+            "size": size
         }
         self._update_markers()
         return marker_id
